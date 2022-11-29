@@ -2,7 +2,7 @@
 
 @section('admin_container')
      <!-- START FORM -->
-     <form action='{{ url('home'.$menu->id) }}' method='POST'>
+     <form action='{{ url('home/'.$menu->id) }}' method='POST'>
     @csrf
     <input type="hidden" name="_method" value="PATCH">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
