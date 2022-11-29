@@ -9,11 +9,7 @@ class menu extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id']; 
-
-    public function category()
-    {
-        return$this->belongsto(category::class);
-    
-    }
+    //protected $guarded = ['id']; 
+ protected $fillabele = ['name', 'image','price'];
+ protected $table = 'menus';
 }

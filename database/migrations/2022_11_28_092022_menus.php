@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->varchar('image');
-            $table->boolean('price');
-            $table->foreignId('category_id');
+            $table->string('image');
+            $table->double('price');
+            //$table->foreignId('category_id');
             $table->timestamps();
         });
     }

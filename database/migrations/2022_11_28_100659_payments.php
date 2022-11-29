@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('transaction_id');
             $table->dateTime('date');
-            $table->varchar('payment_method');
+            $table->string('payment_method');
             $table->timestamps();
         });
     }
