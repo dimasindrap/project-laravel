@@ -20,6 +20,15 @@ Route::get('/', function () {
         "title" => "Beranda"
     ]);
 });
+Route::get('/login', function () {
+    return view('login' ,[
+        "title" => "login"
+    ]);
+});
 
 Route::resource('home',homeController::class);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
