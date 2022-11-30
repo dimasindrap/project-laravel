@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,14 +22,7 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/login', function () {
-    return view('login' ,[
-        "title" => "login"
-    ]);
+    return view('auth.login');
 });
 
-Route::resource('home',homeController::class);
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('home',adminController::class);
